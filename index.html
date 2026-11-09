@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>대련 여행 11/27–11/29</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: 한 줄 세로 흐름(최대 760px) + 상단 고정 섹션 탭. 초겨울 항구(남색 바다·회청 하늘), 붉은색은 경고·중국어 표기에만 */
+:root{
+  --bg:#eef1f4; --surface:#ffffff; --ink:#1b2129; --muted:#5a6573; --line:#d3d9e0;
+  --sea:#24507a; --sea-soft:#dde7f1; --red:#b3362c; --red-soft:#f5e1de; --ok:#2f7a4f;
+  --sky:#d4e0eb; --sun:#f1c96a; --city:#7d8a99; --city2:#a9b6c4; --water:#2b5d8a; --wave:#8fb4d6; --win:#ffe7a3;
+  --f-display:"Do Hyeon","IBM Plex Sans KR",system-ui,sans-serif;
+  --f-body:"IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#13171c; --surface:#1c2229; --ink:#e6eaef; --muted:#98a4b2; --line:#2e3640;
+  --sea:#7fb0de; --sea-soft:#1b2c3d; --red:#ee8a7e; --red-soft:#3a2220; --ok:#7cc79a;
+  --sky:#1a2836; --sun:#d9b45c; --city:#3c4652; --city2:#2b3540; --water:#173550; --wave:#2f5f8a; --win:#c9a95a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#13171c; --surface:#1c2229; --ink:#e6eaef; --muted:#98a4b2; --line:#2e3640;
+  --sea:#7fb0de; --sea-soft:#1b2c3d; --red:#ee8a7e; --red-soft:#3a2220; --ok:#7cc79a;
+  --sky:#1a2836; --sun:#d9b45c; --city:#3c4652; --city2:#2b3540; --water:#173550; --wave:#2f5f8a; --win:#c9a95a; color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.65}
+img{max-width:100%}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;text-wrap:balance;line-height:1.25;margin:0}
+h1{font-size:clamp(30px,7vw,44px)}
+h2{font-size:26px}
+h3{font-size:19px}
+a{color:var(--sea)}
+a:focus-visible{outline:2px solid var(--sea);outline-offset:2px}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+small,.small{font-size:13px}
+.cn{color:var(--red);font-size:13px;white-space:nowrap}
+
+header.hero{padding-block:28px 20px;display:grid;gap:14px}
+.scene{display:block;width:100%;height:auto;border-radius:14px}
+.eyebrow{font-size:12px;letter-spacing:.08em;color:var(--muted)}
+.lede{font-size:16px;margin:0;max-width:62ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.fact b{display:block;font-size:12px;color:var(--muted);font-weight:500;letter-spacing:.04em}
+.fact span{font-size:15px}
+
+nav.tabs{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));overflow-x:auto;white-space:nowrap}
+nav.tabs a{display:inline-block;padding:10px 12px;color:var(--muted);text-decoration:none;font-weight:500;font-size:14px;border-bottom:2px solid transparent}
+nav.tabs a:hover{color:var(--ink);border-bottom-color:var(--sea)}
+
+section{padding-top:36px;display:grid;gap:16px;scroll-margin-top:48px}
+.sec-head{display:grid;gap:4px}
+.note{background:var(--sea-soft);border-radius:8px;padding:12px 14px;font-size:14px}
+.note ul,.warn ul{margin:6px 0 0;padding-left:18px}
+.warn{background:var(--red-soft);border-radius:8px;padding:12px 14px;font-size:14px}
+.warn strong{color:var(--red)}
+
+/* 일정 */
+.day{background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.day-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.day-top .date{font-family:var(--f-display);font-size:22px;color:var(--sea)}
+.day-top .stay{margin-left:auto;font-size:13px;color:var(--muted)}
+ol.tl{list-style:none;margin:0;padding:6px 16px 12px}
+ol.tl li{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:8px 0;border-bottom:1px dashed var(--line)}
+ol.tl li:last-child{border-bottom:0}
+ol.tl .t{font-family:var(--f-mono);font-size:13px;color:var(--muted);padding-top:2px}
+ol.tl .d{min-width:0}
+ol.tl .d p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+.wx{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;padding:9px 16px;background:var(--sea-soft);font-size:13.5px}
+.wx b{font-weight:600;color:var(--sea)}
+.wx .alt{color:var(--muted);font-size:12.5px}
+.wx .wind{flex-basis:100%;font-size:13px}
+.wear{padding:9px 16px 11px;font-size:13.5px;border-bottom:1px dashed var(--line)}
+.wear > b{font-weight:600;color:var(--sea);margin-right:6px}
+.wear ul{margin:4px 0 0;padding-left:18px;color:var(--muted)}
+.wear li{margin:2px 0}
+.wear li strong{color:var(--ink);font-weight:600}
+
+/* 위치 */
+.where{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px 16px}
+.where li{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:9px 0;border-bottom:1px dashed var(--line);list-style:none}
+.where li:last-child{border-bottom:0}
+.where ul{margin:0;padding:0}
+.where .k{font-size:12px;color:var(--muted)}
+.where .dist{font-family:var(--f-mono);font-size:13px;color:var(--sea);text-align:right;white-space:nowrap}
+.where p{grid-column:1/-1;margin:0;font-size:13px;color:var(--muted)}
+
+/* 표 */
+.table-wrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.04em}
+td.r,th.r{text-align:right;white-space:nowrap}
+tfoot td{font-weight:600;border-bottom:0}
+td .sub{display:block;color:var(--muted);font-size:12.5px}
+.total{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+.total div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.total b{display:block;font-size:12px;color:var(--muted);font-weight:500}
+.total .big{font-family:var(--f-display);font-size:21px}
+
+/* 쇼핑·맛집 */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:4px;align-content:start;min-width:0}
+.card h4{margin:0;font-size:15px;font-weight:600}
+.card p{margin:0;font-size:13.5px;color:var(--muted)}
+.card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;font-size:12.5px}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;background:var(--sea-soft);color:var(--sea);font-weight:600}
+.pill.red{background:var(--red-soft);color:var(--red)}
+.area{display:grid;gap:10px}
+.area>h3{color:var(--sea)}
+.meal{font-size:13px;font-weight:600;color:var(--muted);margin:4px 0 -2px}
+footer{padding-top:40px;font-size:12.5px;color:var(--muted);display:grid;gap:6px}
+footer ul{margin:0;padding-left:18px}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <svg class="scene" viewBox="0 0 720 230" role="img" aria-label="초겨울 대련 항구 풍경 일러스트: 바다 위로 고층 빌딩과 다리, 비행기">
+    <rect width="720" height="230" fill="var(--sky)"/>
+    <circle cx="600" cy="58" r="26" fill="var(--sun)" opacity=".85"/>
+    <path d="M60 52 q20-14 40 0 q16-10 30 2 h-70z" fill="var(--surface)" opacity=".8"/>
+    <path d="M300 38 q18-12 36 0 q14-8 26 2 h-62z" fill="var(--surface)" opacity=".7"/>
+    <g fill="var(--city2)">
+      <rect x="40" y="110" width="34" height="70"/><rect x="80" y="96" width="26" height="84"/><rect x="112" y="120" width="40" height="60"/>
+      <rect x="420" y="104" width="30" height="76"/><rect x="456" y="118" width="44" height="62"/><rect x="560" y="112" width="36" height="68"/>
+    </g>
+    <g fill="var(--city)">
+      <rect x="160" y="70" width="34" height="110"/><rect x="200" y="88" width="28" height="92"/><rect x="236" y="60" width="22" height="120"/>
+      <path d="M247 60 v-18" stroke="var(--city)" stroke-width="3"/>
+      <rect x="266" y="100" width="40" height="80"/><rect x="510" y="80" width="40" height="100"/><rect x="604" y="96" width="30" height="84"/><rect x="640" y="120" width="44" height="60"/>
+    </g>
+    <g fill="var(--win)" opacity=".9">
+      <rect x="168" y="80" width="5" height="5"/><rect x="180" y="96" width="5" height="5"/><rect x="168" y="120" width="5" height="5"/>
+      <rect x="241" y="74" width="4" height="4"/><rect x="249" y="100" width="4" height="4"/><rect x="518" y="92" width="5" height="5"/><rect x="532" y="118" width="5" height="5"/>
+    </g>
+    <!-- 다리 -->
+    <path d="M300 172 Q420 120 540 172" fill="none" stroke="var(--sea)" stroke-width="3"/>
+    <path d="M300 172 H560" stroke="var(--sea)" stroke-width="4"/>
+    <g stroke="var(--sea)" stroke-width="1.2"><path d="M340 172 V150M380 172 V137M420 172 V132M460 172 V137M500 172 V150"/></g>
+    <rect x="0" y="178" width="720" height="52" fill="var(--water)"/>
+    <path d="M0 196 q20-6 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="var(--wave)" stroke-width="2"/>
+    <path d="M20 214 q20-6 40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0 t40 0" fill="none" stroke="var(--wave)" stroke-width="1.5" opacity=".6"/>
+    <!-- 배 -->
+    <path d="M90 186 h60 l-8 10 h-44z" fill="var(--surface)"/><rect x="104" y="176" width="22" height="10" fill="var(--red)"/>
+    <!-- 비행기 -->
+    <path d="M400 40 l40 6 l10 -10 l6 1 l-6 12 l22 4 l6 -6 l4 1 l-4 8 l-4 1 l-24 -2 l-10 12 l-6 -1 l6 -12 l-40 -6z" fill="var(--sea)" opacity=".75"/>
+  </svg>
+  <span class="eyebrow">2박 3일 · 성인 4명 · 자유여행</span>
+  <h1>대련 11/27–11/29</h1>
+  <p class="lede">샹그릴라 호텔을 베이스로 시내 근대 거리·해산물·마사지를 즐기고, 둘째 날은 뤼순(안중근 의사 순국지)을 다녀오는 일정입니다. 11월 말 대련은 <b>한국 한겨울에 가까운 체감</b>이라 옷차림을 꼭 보세요.</p>
+  <div class="facts">
+    <div class="fact"><b>가는 편</b><span class="num">CZ686</span> <span>11/27(금) 인천 11:20 → 대련 11:40<br><span class="small muted">현지 시각 · 중국은 한국보다 1시간 느림</span></span></div>
+    <div class="fact"><b>오는 편</b><span class="num">CZ675</span> <span>11/29(일) 대련 19:30 → 인천 21:40경<br><span class="small muted">도착 시각은 조회 사이트 기준 추정</span></span></div>
+    <div class="fact"><b>숙소</b><span>대련 샹그릴라 호텔 (2박)<br><span class="cn">大连香格里拉大酒店 · 人民路66号</span></span></div>
+    <div class="fact"><b>입국</b><span>한국 여권 무비자 (최대 30일)<br><span class="small muted">2026-12-31까지 시행 · 아래 주의사항 참고</span></span></div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="섹션">
+  <a href="#plan">일정</a><a href="#where">위치</a><a href="#cost">예상 비용</a><a href="#shop">쇼핑</a><a href="#eat">맛집</a><a href="#care">주의사항</a>
+</nav>
+
+<!-- 일정 -->
+<section id="plan">
+  <div class="sec-head"><h2>일정</h2><span class="muted small">시간은 현지(중국) 시각 기준 목표치입니다. 날씨·컨디션에 맞춰 조정하세요.</span></div>
+
+  <div class="note"><b>옷차림 기본: "한국 12월 초"처럼 입기</b> · 지난 2년(2024·2025) 같은 날짜 대련은 낮 최고 2~15℃, 아침 최저 -3~6℃였고, 바닷바람이 하루 최대 7~9m/s로 불어 <b>체감 최저는 -9℃</b>까지 내려갔습니다(Open-Meteo 과거 관측 재분석 자료).
+    <ul>
+      <li><b>겉옷:</b> 엉덩이를 덮는 두꺼운 패딩. 해안·광장은 바람막이 효과가 큰 롱패딩이 편합니다.</li>
+      <li><b>안:</b> 호텔·백화점·식당은 난방이 세서, 두꺼운 니트 한 벌보다 얇은 내의 + 맨투맨처럼 벗기 쉬운 겹이 낫습니다.</li>
+      <li><b>소품:</b> 목도리, 장갑, 귀 덮는 모자, 기모 바지나 레깅스. 공기가 건조하다는 후기가 많아 립밤·핸드크림도.</li>
+    </ul>
+    <span class="small muted">여행 블로그 후기도 "하순엔 칼바람, 헤비 패딩·방풍 장갑 필요"로 같은 얘기를 합니다. 각 날짜의 파란 줄은 출발 약 2주 전(11/12경)부터 실제 예보로 자동 바뀝니다.</span>
+  </div>
+
+  <article class="day">
+    <div class="day-top"><span class="date">11/27 금</span><h3>도착 · 중산광장 · 러시아거리 · 동방수성 야경</h3><span class="stay">숙박: 샹그릴라</span></div>
+    <div class="wx" data-date="2026-11-27"><b>예보 전</b><span class="num">지난 2년 같은 날: 최고 2~8℃ / 최저 -3~0℃</span><span class="wind">체감 최저 -9~-6℃ · 바람 최대 8~9m/s · 바람 강함</span></div>
+    <div class="wear"><b>옷차림</b>세 날 중 가장 추울 수 있는 날, 그리고 야경은 바닷가
+      <ul>
+        <li><strong>인천 출발:</strong> 패딩을 입고 출발해도 됩니다. 기내와 공항은 따뜻하니 안은 얇게.</li>
+        <li><strong>낮 시내 걷기:</strong> 중산광장·러시아거리는 넓게 트여 바람이 그대로 붑니다. 장갑·목도리 필수.</li>
+        <li><strong>저녁 동방수성:</strong> 운하 바로 옆이라 체감이 가장 낮습니다. 모자까지 다 챙겨 나가고, 사진은 짧게 찍고 실내로.</li>
+      </ul>
+    </div>
+    <ol class="tl">
+      <li><span class="t">08:50</span><div class="d">인천공항 도착<p>11:20 출발 국제선 기준 2시간 30분 전. 중국남방항공은 조회 사이트 기준 <b>제1터미널</b>입니다. 출발 전날 항공사 앱에서 터미널을 다시 확인하세요.</p></div></li>
+      <li><span class="t">11:40</span><div class="d">대련 저우수이쯔 공항 도착 → 입국심사·짐 찾기<p>비행 약 1시간 20분. 입국신고서 작성이 필요할 수 있으니 펜을 손가방에.</p></div></li>
+      <li><span class="t">12:30</span><div class="d">택시(또는 디디)로 호텔<p>호텔까지 약 13km, 막히지 않으면 25~35분. 정식 택시 승강장이나 디디를 이용하고 호객은 피하세요. 4명 + 캐리어면 일반 택시 1대는 빠듯할 수 있어 2대 또는 디디에서 큰 차(6인승)를 고르세요.</p></div></li>
+      <li><span class="t">13:15</span><div class="d">호텔에 짐 맡기기 → 근처 점심<p>체크인은 보통 14시 이후라 짐만 맡기고 나갑니다(이른 체크인은 프런트에 문의). 점심은 호텔에서 8분 거리 강만광장(港湾广场) 쪽이나 호텔 레스토랑.</p></div></li>
+      <li><span class="t">14:30</span><div class="d">중산광장 → 천진가 → 승리광장 지하상가<p>호텔에서 중산광장까지 걸어서 약 15분. 광장을 둘러싼 20세기 초 서양식 건물(옛 은행·호텔)이 대련의 상징입니다. 이어서 천진가 보행거리, 대련역 앞 승리광장 지하상가까지 걸어서 이동(광장에서 약 15분).</p></div></li>
+      <li><span class="t">16:00</span><div class="d">러시아거리<p>대련역 북쪽, 러시아풍 건물과 기념품 가게 거리. 해 지는 시각이 16시 반 무렵이라(추정) 해 떨어지기 전에 보고 택시로 이동.</p></div></li>
+      <li><span class="t">17:00</span><div class="d">동방수성 야경<p>베네치아를 본뜬 운하 마을. 조명이 켜지는 시간에 맞춰 가면 가장 예쁩니다. 호텔에서 차로 5~10분, 걸으면 40분이라 택시 추천.</p></div></li>
+      <li><span class="t">18:30</span><div class="d">저녁: 해산물<p>맛집리스트의 '첫날 저녁'에서 고르세요. 해산물은 무게(斤=500g) 단가라 주문 전에 무게와 총액을 확인합니다.</p></div></li>
+      <li><span class="t">20:30</span><div class="d">발마사지 → 호텔 휴식<p>호텔 근처 매장은 지도 앱에서 '足疗'로 검색. 첫날은 발마사지 60~90분 정도로 가볍게.</p></div></li>
+    </ol>
+  </article>
+
+  <article class="day">
+    <div class="day-top"><span class="date">11/28 토</span><h3>뤼순 반나절 · 성해광장 · 해산물 만두 · 전신 마사지</h3><span class="stay">숙박: 샹그릴라</span></div>
+    <div class="wx" data-date="2026-11-28"><b>예보 전</b><span class="num">지난 2년 같은 날: 최고 3~11℃ / 최저 -1~1℃</span><span class="wind">체감 최저 -5~-2℃ · 바람 최대 8m/s · 바람 강함</span></div>
+    <div class="wear"><b>옷차림</b>실외·옛 건물 이동이 많은 날
+      <ul>
+        <li><strong>뤼순 감옥:</strong> 야외 동선과 옛 건물 내부를 오래 걷습니다. 옛 건물은 난방이 약할 수 있어(추정) 패딩을 벗지 않을 각오로, 편한 운동화.</li>
+        <li><strong>성해광장:</strong> 바다 앞 초대형 광장이라 대련에서 바람이 가장 센 곳 중 하나입니다. 모자·장갑 다 꺼내고 15~20분만.</li>
+        <li><strong>저녁 이후:</strong> 식당과 마사지숍은 따뜻하니 안에 입은 겹을 벗기 쉽게.</li>
+      </ul>
+    </div>
+    <ol class="tl">
+      <li><span class="t">08:30</span><div class="d">호텔 조식 후 차량으로 뤼순 출발<p>약 47km, 차로 50분~1시간. 왕복과 대기를 묶어 택시·차량을 반나절 대절하면 편합니다. 가격은 출발 전 호텔 컨시어지에 견적을 받아 보세요(아래 예상 비용은 추정치).</p></div></li>
+      <li><span class="t">09:30</span><div class="d">뤼순 일아감옥 구지 박물관 <span class="cn">旅顺日俄监狱旧址</span><p>안중근 의사가 순국한 곳이며 기념 전시실이 있습니다. 1.5~2시간. 운영시간이 자료마다 달라(09:00~16:30 / ~20:00) 출발 전 확인이 필요하고, 월요일 휴관이라는 자료가 있어 토요일 방문은 문제없을 것으로 보입니다. 실명 사전예약이 필요한지도 함께 확인하세요.</p></div></li>
+      <li><span class="t">11:30</span><div class="d">(선택) 뤼순 관동법원 구지 <span class="cn">旅顺关东法院旧址</span><p>안중근 의사의 재판이 열린 법원 건물. 감옥에서 차로 가깝습니다. 개방 여부는 현지에서 확인.</p></div></li>
+      <li><span class="t">12:30</span><div class="d">뤼순에서 점심<p>지도 앱에서 '海鲜饺子(해산물 만두)'나 '家常菜(가정식)'로 근처 검색.</p></div></li>
+      <li><span class="t">14:00</span><div class="d">돌아오는 길에 성해광장<p>호텔에서 차로 약 9km. 바다를 바라보는 큰 광장과 해상 대교 풍경. 바람 세면 차에서 내려 사진만.</p></div></li>
+      <li><span class="t">15:30</span><div class="d">호텔에서 휴식</div></li>
+      <li><span class="t">18:00</span><div class="d">저녁: 해산물 만두·동북 요리<p>삼치 만두(鲅鱼饺子), 개불 만두(海肠饺子)가 대련식입니다.</p></div></li>
+      <li><span class="t">20:00</span><div class="d">전신 마사지 90분<p>4명 동시 예약은 미리 전화나 호텔 프런트를 통해 잡아 두면 기다리지 않습니다.</p></div></li>
+    </ol>
+  </article>
+
+  <article class="day">
+    <div class="day-top"><span class="date">11/29 일</span><h3>해안도로 · 체크아웃 · 쇼핑 · 귀국</h3></div>
+    <div class="wx" data-date="2026-11-29"><b>예보 전</b><span class="num">지난 2년 같은 날: 최고 9~15℃ / 최저 -1~6℃</span><span class="wind">체감 최저 -4~4℃ · 바람 최대 7m/s · 바람 느껴짐</span></div>
+    <div class="wear"><b>옷차림</b>낮엔 조금 풀리지만 해안도로는 여전히 바람
+      <ul>
+        <li><strong>오전 해안도로:</strong> 차 안에서 보는 구간이 많지만 전망 포인트에서 내릴 땐 패딩 지퍼까지.</li>
+        <li><strong>오후 쇼핑:</strong> 실내 위주. 패딩은 캐리어 대신 들고 다니세요.</li>
+        <li><strong>인천 도착(21:40경):</strong> 한국 11월 말 밤도 영하 근처일 수 있습니다(추정). 패딩은 기내에 들고 타세요.</li>
+      </ul>
+    </div>
+    <ol class="tl">
+      <li><span class="t">09:30</span><div class="d">택시로 빈하이루 해안도로 + 라오후탄<p>호텔에서 라오후탄까지 차로 약 7km. 해안 절벽길을 따라 달리는 드라이브 코스로, 1시간 30분~2시간이 걸린다는 안내가 있습니다. 시간이 빠듯하면 라오후탄 해변만 짧게 보고 돌아옵니다.</p></div></li>
+      <li><span class="t">11:30</span><div class="d">호텔 복귀 → 12:00 체크아웃 → 짐 맡기기<p>체크아웃 시각은 예약 확인서에서 확인. 레이트 체크아웃이 되면 오후 짐 정리가 편합니다.</p></div></li>
+      <li><span class="t">12:30</span><div class="d">점심<p>마지막 끼니로 만두나 동북 요리.</p></div></li>
+      <li><span class="t">13:30</span><div class="d">쇼핑 또는 마사지 한 번 더<p>호텔 근처 백화점·마트에서 간식·차·기념품. 쇼핑이 적으면 비행기 타기 전 발마사지 1시간을 넣는 것도 좋습니다.</p></div></li>
+      <li><span class="t">16:30</span><div class="d">호텔에서 짐 찾아 공항으로<p>일요일 오후 시내 정체를 감안해 넉넉히. 공항 도착 17:15 목표(출발 2시간 15분 전).</p></div></li>
+      <li><span class="t">19:30</span><div class="d">CZ675 출발 → 인천 21:40경 도착 (한국 시각)<p>남은 위안화 동전은 공항에서 쓰기 어렵습니다. 지폐는 다음 여행용으로 보관하거나 공항 편의점에서 정리하세요.</p></div></li>
+    </ol>
+  </article>
+</section>
+
+<!-- 위치 -->
+<section id="where">
+  <div class="sec-head"><h2>호텔 기준 위치</h2><span class="muted small">거리는 OpenStreetMap 경로 계산(OSRM) 기준입니다. 차 시간은 정체 없는 값이라 실제로는 더 걸립니다. 이름을 누르면 가오더 지도(高德地图)로 열립니다.</span></div>
+  <div class="where"><ul id="whereList"></ul></div>
+  <div class="note"><b>택시 기사에게 보여줄 호텔 주소</b><br><span class="cn" style="font-size:16px">大连香格里拉大酒店 · 大连市中山区人民路66号</span><br><span class="small muted">휴대폰에 캡처해 두세요. 대련 사람들은 영어보다 한자 주소를 훨씬 빨리 알아봅니다.</span></div>
+</section>
+
+<!-- 비용 -->
+<section id="cost">
+  <div class="sec-head"><h2>예상 비용 (1인)</h2><span class="muted small">항공·숙박 제외, 성인 1인 기준 위안(元). 택시·차량은 4명이 나눠 내는 것으로 계산했습니다. 원화 환산은 1元 ≈ 203원(2026-11-09, open.er-api.com) 기준이며, 실제 결제 환율과 다릅니다.</span></div>
+  <div class="total" id="totals"></div>
+  <div class="table-wrap"><table>
+    <thead><tr><th>항목</th><th>근거</th><th class="r">1인 (元)</th></tr></thead>
+    <tbody id="costBody"></tbody>
+    <tfoot><tr><td colspan="2">합계</td><td class="r num" id="costSum"></td></tr></tfoot>
+  </table></div>
+  <p class="small muted" style="margin:0">기념품·해삼처럼 큰 쇼핑은 빠져 있습니다. 마사지와 뤼순 차량 대절 금액은 현지 가격을 확인하지 못한 <b>추정치</b>입니다. 중요한 예산 결정은 현지 최신 가격으로 교차 확인하세요.</p>
+</section>
+
+<!-- 쇼핑 -->
+<section id="shop">
+  <div class="sec-head"><h2>쇼핑리스트</h2><span class="muted small">어디서 사면 좋은지 함께 적었습니다.</span></div>
+  <div class="cards" id="shopList"></div>
+  <div class="warn"><strong>한국 반입 주의.</strong> 생과일·생채소, 육류와 육가공품(소시지·육포·고기 들어간 만두 포함)은 검역 때문에 한국으로 가져올 수 없습니다. 건해삼 같은 수산물과 중국 약품은 품목·양에 따라 기준이 달라 구매 전 관세청·농림축산검역본부 안내를 확인하세요. 세관 관련 내용은 전문가(관세청 상담) 확인을 권장합니다.</div>
+</section>
+
+<!-- 맛집 -->
+<section id="eat">
+  <div class="sec-head"><h2>맛집리스트</h2><span class="muted small">날짜·동선별로 묶고 점심/저녁/간식으로 나눴습니다. 가격은 1인 평균(人均) 기준이며, 출처 기사의 2026년 값입니다. 지점이 여러 곳인 체인이 많아 지도에서 가장 가까운 지점을 고르세요.</span></div>
+  <div id="eatList" class="area"></div>
+  <div class="note"><b>주문 팁</b>
+    <ul>
+      <li>해산물 식당은 수조에서 고르고 <b>무게(斤 진=500g) × 단가</b>로 계산합니다. 고른 뒤 무게와 총액을 계산기로 보여 달라고 하면 바가지를 피할 수 있습니다.</li>
+      <li>요리 한 접시 양이 많습니다. 4명이면 요리 4~5개 + 만두 1~2판이면 충분합니다.</li>
+      <li>사진 메뉴판이 없으면 번역 앱 카메라 번역(파파고 등)이 잘 통합니다.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 주의사항 -->
+<section id="care">
+  <div class="sec-head"><h2>주의사항 · 출발 전 할 일</h2></div>
+  <div class="warn"><strong>무비자 입국은 2026-12-31까지 시행 중인 한시 정책입니다.</strong> 한국 일반여권은 관광 목적 최대 30일 무비자로 알려져 있습니다(한국경제 2025-11-03 보도, 여행사 안내 기준). 이번 여행은 기간 안이지만, 출발 전 주한중국대사관 공지로 한 번 더 확인하세요. 여권 유효기간은 6개월 이상 남아 있는 게 안전합니다.</div>
+  <div class="cards">
+    <div class="card"><h4>결제: 알리페이·위챗페이</h4><p>중국은 현금·카드보다 QR 결제가 기본입니다. 출국 전 알리페이(또는 위챗페이)를 깔고 한국 신용카드를 연결해 실명 인증까지 끝내 두세요. 택시·노점용 현금도 조금(인당 200~300元).</p></div>
+    <div class="card"><h4>택시: 디디(DiDi)</h4><p>알리페이 안의 디디 메뉴나 DiDi 앱으로 부를 수 있고, 목적지를 중국어로 입력하지 않아도 지도에서 고르면 됩니다. 결제도 앱으로 끝나 흥정이 필요 없습니다.</p></div>
+    <div class="card"><h4>지도: 가오더(高德)·바이두</h4><p>구글 지도는 중국에서 위치가 어긋나고 검색이 약합니다. 가오더 지도를 깔아 두면 이 페이지의 장소 링크도 바로 열립니다.</p></div>
+    <div class="card"><h4>인터넷</h4><p>구글·카카오톡·인스타그램은 중국 현지 와이파이·유심에서는 막히는 경우가 많습니다. 한국 통신사 로밍이나 '중국 로밍형' eSIM이 대체로 잘 된다는 후기가 많습니다(확인 필요).</p></div>
+    <div class="card"><h4>시차·전기</h4><p>중국은 한국보다 1시간 느립니다. 이 페이지의 시각은 모두 중국 시각. 콘센트는 220V로 한국 플러그가 대부분 그대로 꽂히지만 모양이 다른 구멍도 있어 멀티 어댑터 1개 권장.</p></div>
+    <div class="card"><h4>항공편 재확인</h4><p>CZ686 출발 11:20/11:25, CZ675 출발 19:14~19:34로 조회 사이트마다 조금씩 다르고, 일부 날짜 결항 기록도 있습니다. 출발 2~3일 전 중국남방항공 앱에서 시간과 터미널을 확인하세요.</p></div>
+  </div>
+  <p class="small muted" style="margin:0">이 페이지는 AI(Claude)가 공개 자료를 바탕으로 정리한 초안입니다. 운영시간·가격·입국 규정은 바뀔 수 있으니 중요한 결정 전에는 공식 안내로 교차 확인하세요.</p>
+</section>
+
+<footer>
+  <b>참고 자료 (조회일 2026-11-10)</b>
+  <ul>
+    <li>항공: <a href="https://kr.trip.com/flights/status-cz686/" target="_blank" rel="noopener">Trip.com CZ686</a> · <a href="https://www.flightstats.com/v2/flight-details/CZ/675" target="_blank" rel="noopener">FlightStats CZ675</a></li>
+    <li>무비자: <a href="https://www.hankyung.com/article/202511031390i" target="_blank" rel="noopener">한국경제 2025-11-03</a> · <a href="https://kr.trip.com/guide/info/china-visa-free-period.html" target="_blank" rel="noopener">Trip.com 안내</a></li>
+    <li>호텔: <a href="https://www.shangri-la.com/en/dalian/shangrila/about" target="_blank" rel="noopener">Shangri-La Dalian 공식</a></li>
+    <li>날씨: Open-Meteo 예보·과거 재분석(2024·2025년 11/27~29) · 후기: <a href="https://www.tripstore.kr/blog/%EB%8C%80%EB%A0%A8-11%EC%9B%94-%EB%82%A0%EC%94%A8-%EC%98%B7%EC%B0%A8%EB%A6%BC-%EA%B0%80%EC%9D%B4%EB%93%9C" target="_blank" rel="noopener">트립스토어 대련 11월 옷차림</a></li>
+    <li>맛집 가격: <a href="https://www.sina.cn/news/article/niknezi1678842.html" target="_blank" rel="noopener">新浪 대련 맛집 기사</a> · <a href="https://you.ctrip.com/yougourmet/restaurantlist/shanghai4.html" target="_blank" rel="noopener">携程 美食</a></li>
+    <li>뤼순 감옥 운영시간: <a href="https://gs.ctrip.com/html5/you/sight/120470/64344.html" target="_blank" rel="noopener">携程</a> · <a href="https://www.lonelyplanet.fr/poi/prison-de-lushun" target="_blank" rel="noopener">Lonely Planet</a></li>
+    <li>위치·거리: © OpenStreetMap contributors, OSRM</li>
+  </ul>
+</footer>
+</div>
+
+<script>
+(function(){
+  function amap(cn){return 'https://uri.amap.com/search?keyword='+encodeURIComponent(cn)+'&city=210200'}
+
+  // 위치: [종류, 이름, 중국어, 거리 문구, 메모]
+  var where=[
+    ['호텔','대련 샹그릴라 호텔','大连香格里拉大酒店','—','인민로(人民路) 66호'],
+    ['광장','강만광장','港湾广场','걸어서 600m · 8분','호텔에서 가장 가까운 번화가'],
+    ['광장','중산광장','中山广场','걸어서 1.1km · 15분','근대 서양식 건물에 둘러싸인 원형 광장'],
+    ['거리','천진가 보행거리','天津街','걸어서 1.6km · 22분','상점·먹거리 거리'],
+    ['쇼핑','승리광장 지하상가','胜利广场','걸어서 1.9km · 26분','대련역 앞. 넓고 복잡하니 만날 곳을 정해 두기'],
+    ['거리','러시아거리','俄罗斯风情街','걸어서 2.0km · 26분','대련역 북쪽, 기념품 거리'],
+    ['야경','동방수성','东方水城','차로 3.4km · 약 10분','걸으면 40분 이상'],
+    ['광장','성해광장','星海广场','차로 9km · 20~30분','바닷가 대형 광장'],
+    ['해안','라오후탄','老虎滩','차로 7km · 15~25분','빈하이루 해안도로 동쪽 구간'],
+    ['근교','뤼순 일아감옥 구지','旅顺日俄监狱旧址','차로 47km · 50분~1시간','안중근 의사 순국지'],
+    ['공항','대련 저우수이쯔 국제공항','大连周水子国际机场','차로 13km · 25~40분','일요일 오후는 여유 있게']
+  ];
+  var ul=document.getElementById('whereList');
+  where.forEach(function(w){
+    var li=document.createElement('li');
+    li.innerHTML='<div><span class="k">'+w[0]+'</span><br><a href="'+amap(w[2])+'" target="_blank" rel="noopener">'+w[1]+'</a> <span class="cn">'+w[2]+'</span></div><span class="dist">'+w[3]+'</span><p>'+w[4]+'</p>';
+    ul.appendChild(li);
+  });
+
+  // 비용 (元, 1인): [항목, 근거, 최소, 최대]
+  var RATE=203;
+  var cost=[
+    ['공항 ↔ 호텔 택시 왕복','편도 1대 40~60元 (13km), 4명 분담',20,30],
+    ['시내 택시·디디 5~6회','1회 1대 15~30元, 4명 분담',25,45],
+    ['뤼순 반나절 차량 대절','1대 400~700元 추정, 4명 분담 · 호텔 견적 확인',100,175],
+    ['점심 ×3','1끼 50~100元',150,300],
+    ['저녁 ×2 (해산물)','1인 평균 120~300元',240,600],
+    ['간식·커피·물','하루 20~40元',60,120],
+    ['마사지 2회','발 60~90분 + 전신 90분, 회당 100~250元 추정',200,500],
+    ['입장료','뤼순 감옥 등 · 요금 확인 필요',0,60]
+  ];
+  var lo=0,hi=0,tb=document.getElementById('costBody');
+  cost.forEach(function(c){
+    lo+=c[2];hi+=c[3];
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td>'+c[0]+'</td><td><span class="sub">'+c[1]+'</span></td><td class="r num">'+c[2].toLocaleString()+'~'+c[3].toLocaleString()+'</td>';
+    tb.appendChild(tr);
+  });
+  document.getElementById('costSum').textContent=lo.toLocaleString()+'~'+hi.toLocaleString()+'元';
+  function man(v){return Math.round(v*RATE/10000)}
+  document.getElementById('totals').innerHTML=
+    '<div><b>1인 (元)</b><span class="big num">'+lo.toLocaleString()+'~'+hi.toLocaleString()+'</span></div>'+
+    '<div><b>1인 원화 환산 (참고)</b><span class="big num">약 '+man(lo)+'~'+man(hi)+'만 원</span></div>'+
+    '<div><b>4명 전체 (元)</b><span class="big num">'+(lo*4).toLocaleString()+'~'+(hi*4).toLocaleString()+'</span></div>';
+
+  // 쇼핑: [이름, 설명, 어디서]
+  var shop=[
+    ['러시아 초콜릿·과자','알룐카(Alenka) 초콜릿 등 러시아 간식. 대련이라 흔하게 팝니다.','러시아거리'],
+    ['마트료시카 인형','러시아거리 대표 기념품. 크기·그림에 따라 가격 차이가 크니 몇 집 비교.','러시아거리'],
+    ['중국 간식','따바이투(大白兔) 밀크 사탕, 웨이룽(卫龙) 매운 간식, 해바라기씨 등.','마트·편의점'],
+    ['훠궈·요리 소스','하이디라오 소스 등 한국보다 훨씬 쌉니다. 액체는 위탁 수하물로.','마트'],
+    ['차','녹차·보이차·꽃차. 소포장으로 여러 종류 사서 나눠 갖기 좋습니다.','백화점 식품관·차 전문점'],
+    ['건해삼','대련 대표 특산물. 고가라 품질 차이가 커서 백화점 등 믿을 만한 매장에서. 반입 기준 확인 필요.','백화점·전문점'],
+    ['에그타르트','승리광장 지하 2층 베이커리가 유명하다는 후기. 그 자리에서 먹는 간식.','승리광장 지하상가'],
+    ['생활 잡화·옷','지하상가는 저렴한 옷·잡화가 많지만 품질은 직접 보고.','승리광장 지하상가·천진가']
+  ];
+  var sl=document.getElementById('shopList');
+  shop.forEach(function(s){
+    var d=document.createElement('div');d.className='card';
+    d.innerHTML='<h4>'+s[0]+'</h4><p>'+s[1]+'</p><div class="meta"><span class="pill">'+s[2]+'</span></div>';
+    sl.appendChild(d);
+  });
+
+  // 맛집: [묶음, [[구분, [[이름, 중국어, 설명, 추천 메뉴, 가격]...]]...]]
+  var eat=[
+    ['첫날 · 시내 (11/27)',[
+      ['점심',[
+        ['호텔 근처 강만광장 식당가','港湾广场','도착 직후라 멀리 가지 않고 호텔에서 걸어서 8분 거리에서 해결.','꿔바로우(锅包肉), 볶음밥, 만두','1인 40~80元']
+      ]],
+      ['저녁',[
+        ['톈톈위강','天天渔港','대련 해산물 체인. 단체·가족 모임에 맞는 분위기라 4명이 룸 없이도 편하게 먹기 좋습니다.','생선찜(清蒸鱼), 바지락볶음(辣炒蛤蜊), 성게(海胆)','1인 평균 120~150元'],
+        ['완바오 해선방','万宝海鲜舫','대련의 대표 고급 해산물 식당. 룸이 160개 이상이라 예약하면 4명 룸도 가능할 것으로 보입니다.','활어·조개 요리, 해산물 만두','고급 · 가격 확인 필요']
+      ]],
+      ['간식',[
+        ['길거리 먼쯔','焖子','전분 묵을 지져 소스를 뿌린 대련 길거리 간식. 천진가·러시아거리 노점에서 보이면 한 접시 나눠 먹기.','먼쯔','1접시 10~15元 (추정)']
+      ]]
+    ]],
+    ['둘째 날 · 뤼순 · 시내 (11/28)',[
+      ['점심',[
+        ['뤼순 현지 식당','旅顺 海鲜饺子','특정 가게는 확인하지 못했습니다. 감옥 근처에서 지도 앱으로 \'海鲜饺子\' 검색 후 평점 높은 곳.','해산물 만두, 가정식','1인 40~80元 (추정)']
+      ]],
+      ['저녁',[
+        ['르웨밍','日月明','해산물 수제 만두로 소개되는 곳. 1인 평균 백 위안 남짓.','해산물 수제 만두, 해산물 볶음','1인 평균 100元 남짓'],
+        ['솽성위안 해선교자관','双盛园海鲜饺子馆','현지인이 많이 찾는 실속형 만두집으로 소개됩니다.','삼치 만두(鲅鱼饺子), 개불 만두(海肠饺子)','저렴 · 가격 확인 필요']
+      ]]
+    ]],
+    ['마지막 날 (11/29)',[
+      ['점심',[
+        ['라오다롄','老大连','대련 향토 요리. 성해광장 쪽 지점(星海·自然博物馆店) 기준.','대련식 해산물 요리, 만두','1인 평균 98元'],
+        ['하이웨이당자','海味当家','해산물을 쪄서 내는 방식으로 소개된 곳.','해산물 찜','가격 확인 필요']
+      ]]
+    ]]
+  ];
+  var host=document.getElementById('eatList');
+  eat.forEach(function(g){
+    var sec=document.createElement('div');sec.className='area';
+    sec.innerHTML='<h3>'+g[0]+'</h3>';
+    g[1].forEach(function(m){
+      var h=document.createElement('div');h.className='meal';h.textContent=m[0];sec.appendChild(h);
+      var cards=document.createElement('div');cards.className='cards';
+      m[1].forEach(function(r){
+        var c=document.createElement('div');c.className='card';
+        c.innerHTML='<h4><a href="'+amap(r[1])+'" target="_blank" rel="noopener">'+r[0]+'</a> <span class="cn">'+r[1]+'</span></h4><p>'+r[2]+'</p><p><b>추천</b> '+r[3]+'</p><div class="meta"><span class="pill red">'+r[4]+'</span></div>';
+        cards.appendChild(c);
+      });
+      sec.appendChild(cards);
+    });
+    host.appendChild(sec);
+  });
+
+  // 날짜별 날씨: 예보 범위(16일)에 들어오면 Open-Meteo 예보로 교체, 아니면 지난 2년 값 유지
+  var WMO={0:'맑음',1:'대체로 맑음',2:'구름 조금',3:'흐림',45:'안개',48:'안개',51:'약한 이슬비',53:'이슬비',55:'이슬비',61:'약한 비',63:'비',65:'강한 비',71:'약한 눈',73:'눈',75:'많은 눈',77:'싸락눈',80:'소나기',81:'소나기',82:'강한 소나기',85:'눈 소나기',86:'눈 소나기',95:'뇌우'};
+  var boxes=[].slice.call(document.querySelectorAll('.wx[data-date]'));
+  if(!boxes.length||!window.fetch)return;
+  fetch('https://api.open-meteo.com/v1/forecast?latitude=38.92&longitude=121.65&timezone=Asia%2FShanghai'+
+    '&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_probability_max,wind_speed_10m_max,wind_gusts_10m_max&wind_speed_unit=ms&forecast_days=16')
+  .then(function(r){if(!r.ok)throw r.status;return r.json()}).then(function(j){
+    var d=j.daily,now=new Date(),stamp=(now.getMonth()+1)+'/'+now.getDate()+' '+String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
+    boxes.forEach(function(b){
+      var i=d.time.indexOf(b.getAttribute('data-date'));
+      if(i<0||d.temperature_2m_max[i]==null)return;
+      var w=d.wind_speed_10m_max[i];
+      var lv=w<4?'바람 약함':(w<7?'바람 느껴짐 · 목도리 챙기기':'바람 강함 · 해안·광장 체감 크게 떨어짐');
+      b.innerHTML='<b>'+(WMO[d.weather_code[i]]||'예보')+'</b><span class="num">'+Math.round(d.temperature_2m_max[i])+'℃ / '+Math.round(d.temperature_2m_min[i])+'℃ · 비/눈 '+Math.round(d.precipitation_probability_max[i])+'%</span><span class="alt">Open-Meteo 예보 · '+stamp+' 불러옴</span>'+
+        '<span class="wind">체감 '+Math.round(d.apparent_temperature_min[i])+'~'+Math.round(d.apparent_temperature_max[i])+'℃ · 바람 최대 '+Math.round(w)+'m/s(돌풍 '+Math.round(d.wind_gusts_10m_max[i])+'m/s) · '+lv+'</span>';
+    });
+  }).catch(function(){});
+})();
+</script>
+</body>
+</html>
