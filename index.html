@@ -120,6 +120,12 @@ td .sub{display:block;color:var(--muted);font-size:12.5px}
 footer{padding-top:40px;font-size:12.5px;color:var(--muted);display:grid;gap:6px}
 footer ul{margin:0;padding-left:18px}
 footer a{color:var(--muted)}
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;padding:14px 16px 2px}
+.photos.wide{padding:0}
+.photos figure{margin:0;display:grid;gap:4px;min-width:0}
+.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--line)}
+.photos figcaption{font-size:12.5px;line-height:1.4}
+.photos figcaption span{display:block;color:var(--muted);font-size:11px}
 </style>
 </head>
 <body>
@@ -194,6 +200,13 @@ footer a{color:var(--muted)}
         <li><strong>저녁 동방수성:</strong> 운하 바로 옆이라 체감이 가장 낮습니다. 모자까지 다 챙겨 나가고, 사진은 짧게 찍고 실내로.</li>
       </ul>
     </div>
+    <div class="photos">
+      <figure><img src="img/zhongshan.jpg" alt="원형 광장을 둘러싼 근대 서양식 건물들" loading="lazy"><figcaption>중산광장<span>사진: xiquinhosilva · CC BY 2.0</span></figcaption></figure>
+      <figure><img src="img/tianjin.jpg" alt="상점이 늘어선 천진가 보행거리" loading="lazy"><figcaption>천진가<span>사진: 董辰兴 · CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="img/shengli.jpg" alt="대련역 앞 승리광장" loading="lazy"><figcaption>승리광장<span>사진: Yoshi Canopus · CC BY-SA 3.0</span></figcaption></figure>
+      <figure><img src="img/russian.jpg" alt="러시아풍 건물이 늘어선 러시아거리" loading="lazy"><figcaption>러시아거리<span>사진: xiquinhosilva · CC BY 2.0</span></figcaption></figure>
+      <figure><img src="img/donggang.jpg" alt="바다에 접한 동항 지구와 고층 빌딩 항공사진" loading="lazy"><figcaption>동방수성이 있는 동항(东港) 일대<span>사진: HSJ233 · CC BY-SA 4.0</span></figcaption></figure>
+    </div>
     <ol class="tl">
       <li><span class="t">08:50</span><div class="d">인천공항 도착<p>11:20 출발 국제선 기준 2시간 30분 전. 중국남방항공은 조회 사이트 기준 <b>제1터미널</b>입니다. 출발 전날 항공사 앱에서 터미널을 다시 확인하세요.</p></div></li>
       <li><span class="t">11:40</span><div class="d">대련 저우수이쯔 공항 도착 → 입국심사·짐 찾기<p>비행 약 1시간 20분. 입국신고서 작성이 필요할 수 있으니 펜을 손가방에.</p></div></li>
@@ -216,6 +229,12 @@ footer a{color:var(--muted)}
         <li><strong>성해광장:</strong> 바다 앞 초대형 광장이라 대련에서 바람이 가장 센 곳 중 하나입니다. 모자·장갑 다 꺼내고 15~20분만.</li>
         <li><strong>오후 쇼핑·저녁 이후:</strong> 매장·식당·마사지숍은 난방이 세서, 안에 입은 겹을 벗기 쉽게. 쇼핑백이 늘어나니 패딩은 가벼운 걸로.</li>
       </ul>
+    </div>
+    <div class="photos">
+      <figure><img src="img/binhai.jpg" alt="바다를 끼고 절벽을 따라 달리는 빈하이루" loading="lazy"><figcaption>빈하이루 해안도로<span>사진: 燃玉 · CC BY-SA 3.0</span></figcaption></figure>
+      <figure><img src="img/laohutan.jpg" alt="라오후탄 바닷가와 갈매기" loading="lazy"><figcaption>라오후탄<span>사진: 燃玉 · CC BY-SA 3.0</span></figcaption></figure>
+      <figure><img src="img/xinghai.jpg" alt="성해광장 앞 바다를 가로지르는 해상 대교" loading="lazy"><figcaption>성해광장과 해상 대교<span>사진: Yingxi120 · CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="img/miniso.jpg" alt="캐릭터 굿즈가 진열된 미니소 매장" loading="lazy"><figcaption>미니소 매장 (베이징)<span>사진: N509FZ · CC BY-SA 4.0</span></figcaption></figure>
     </div>
     <ol class="tl">
       <li><span class="t">09:30</span><div class="d">호텔 조식 후 택시로 빈하이루 해안도로 → 라오후탄<p>호텔에서 라오후탄까지 차로 약 7km. 해안 절벽길을 따라 달리는 드라이브 코스로, 1시간 30분~2시간이 걸린다는 안내가 있습니다. 전망 포인트에서 잠깐씩 내려 사진만 찍고 이동하세요.</p></div></li>
@@ -272,6 +291,11 @@ footer a{color:var(--muted)}
 <!-- 쇼핑 -->
 <section id="shop">
   <div class="sec-head"><h2>쇼핑리스트</h2><span class="muted small">어디서 사면 좋은지 함께 적었습니다.</span></div>
+  <div class="photos wide">
+      <figure><img src="img/miniso.jpg" alt="캐릭터 굿즈가 진열된 미니소 매장" loading="lazy"><figcaption>미니소 (참고: 베이징 매장)<span>사진: N509FZ · CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="img/matryoshka.jpg" alt="알록달록한 마트료시카 인형들" loading="lazy"><figcaption>마트료시카<span>사진: LR0725 · CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="img/seacucumber.jpg" alt="포장된 대련산 건해삼" loading="lazy"><figcaption>대련 건해삼<span>사진: Fumikas Sagisavas · CC0</span></figcaption></figure>
+  </div>
   <div class="cards" id="shopList"></div>
   <div class="warn"><strong>한국 반입 주의.</strong> 생과일·생채소, 육류와 육가공품(소시지·육포·고기 들어간 만두 포함)은 검역 때문에 한국으로 가져올 수 없습니다. 건해삼 같은 수산물과 중국 약품은 품목·양에 따라 기준이 달라 구매 전 관세청·농림축산검역본부 안내를 확인하세요. 세관 관련 내용은 전문가(관세청 상담) 확인을 권장합니다.</div>
 </section>
@@ -279,6 +303,12 @@ footer a{color:var(--muted)}
 <!-- 맛집 -->
 <section id="eat">
   <div class="sec-head"><h2>맛집리스트</h2><span class="muted small">날짜·동선별로 묶고 점심/저녁/간식으로 나눴습니다. 가격은 1인 평균(人均) 기준이며, 출처 기사의 2026년 값입니다. 지점이 여러 곳인 체인이 많아 지도에서 가장 가까운 지점을 고르세요.</span></div>
+  <div class="photos wide">
+      <figure><img src="img/xijiade.jpg" alt="빨간 간판의 시지아더 새우 물만두 매장" loading="lazy"><figcaption>시지아더 매장 (참고: 다른 도시)<span>사진: Windmemories · CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="img/haidilao.jpg" alt="훠궈 냄비와 고기·당면·과일이 차려진 식탁" loading="lazy"><figcaption>하이디라오 훠궈<span>사진: Fumikas Sagisavas · CC0</span></figcaption></figure>
+      <figure><img src="img/menzi.jpg" alt="새우와 해산물을 곁들인 먼쯔 한 접시" loading="lazy"><figcaption>삼선 먼쯔 (대련, 2025-11)<span>사진: JacobLyu · CC BY-SA 4.0</span></figcaption></figure>
+      <figure><img src="img/jellyfish.jpg" alt="대련식 해파리 요리" loading="lazy"><figcaption>대련 해파리 요리<span>사진: Fumikas Sagisavas · CC0</span></figcaption></figure>
+  </div>
   <div id="eatList" class="area"></div>
   <div class="note"><b>주문 팁</b>
     <ul>
@@ -314,6 +344,19 @@ footer a{color:var(--muted)}
     <li>맛집 가격: <a href="https://www.sina.cn/news/article/niknezi1678842.html" target="_blank" rel="noopener">新浪 대련 맛집 기사</a> · <a href="https://you.ctrip.com/yougourmet/restaurantlist/shanghai4.html" target="_blank" rel="noopener">携程 美食</a></li>
     <li>미니소 매장 형태(SUPER MINISO·MINISO LAND): <a href="https://m.jiemian.com/article/12983106.html" target="_blank" rel="noopener">界面新闻</a> · 천진가 매장 위치는 OpenStreetMap 등록 정보</li>
     <li>위치·거리: © OpenStreetMap contributors, OSRM</li>
+    <li>사진 (Wikimedia Commons, 크기만 줄이고 내용은 바꾸지 않음):
+      <a href="https://commons.wikimedia.org/wiki/File:Zhongshan_Square,_Aug2018.jpg" target="_blank" rel="noopener">중산광장</a>·<a href="https://commons.wikimedia.org/wiki/File:Russian_Folk_Street_27256-Dalian_(48710880536).jpg" target="_blank" rel="noopener">러시아거리</a> xiquinhosilva CC BY 2.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E8%BF%9E%E4%B8%8A%E6%B5%B7%E8%B7%AF%E5%A4%A9%E6%B4%A5%E8%A1%97%E8%A5%BF%E5%90%91.jpg" target="_blank" rel="noopener">천진가</a> 董辰兴 CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Victory_Square_1,_Dalian,_China.jpg" target="_blank" rel="noopener">승리광장</a> Yoshi Canopus CC BY-SA 3.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Donggang_Dalian.jpg" target="_blank" rel="noopener">동항</a> HSJ233 CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:%E6%BB%A8%E6%B5%B7%E4%B8%AD%E8%B7%AF%E7%BA%A65000%E7%B1%B3(retouched).jpg" target="_blank" rel="noopener">빈하이루</a>·<a href="https://commons.wikimedia.org/wiki/File:%E8%80%81%E8%99%8E%E6%BB%A9-%E6%B5%B7%E9%B8%A5-1.jpg" target="_blank" rel="noopener">라오후탄</a> 燃玉 CC BY-SA 3.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Xinghai_Bay_Bridge_in_Xinghai_Square,_Dalian.jpg" target="_blank" rel="noopener">성해광장</a> Yingxi120 CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Miniso_store_at_Beijing_apm_4F_(20211201183600).jpg" target="_blank" rel="noopener">미니소</a> N509FZ CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Many_matryoshka_dolls.jpg" target="_blank" rel="noopener">마트료시카</a> LR0725 CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:20211217_Dumpling_Xi_at_David_Plaza.jpg" target="_blank" rel="noopener">시지아더</a> Windmemories CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Sanxian_Menzi_at_a_Restaurant_in_Dalian_20251122.jpg" target="_blank" rel="noopener">먼쯔</a> JacobLyu CC BY-SA 4.0 ·
+      <a href="https://commons.wikimedia.org/wiki/File:Haidilao_hot_pot_(20250201).jpg" target="_blank" rel="noopener">하이디라오</a>·<a href="https://commons.wikimedia.org/wiki/File:Dalian_jellyfish_dishes.jpg" target="_blank" rel="noopener">해파리 요리</a>·<a href="https://commons.wikimedia.org/wiki/File:Dried_Dalian_seacucumbers.jpg" target="_blank" rel="noopener">건해삼</a> Fumikas Sagisavas CC0
+    </li>
   </ul>
 </footer>
 </div>
